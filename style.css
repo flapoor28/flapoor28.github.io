@@ -4,6 +4,10 @@
   --bs-primary-hover: #ff1a4d;
 }
 
+.btn-primary {
+  background-color: #031926 !important;
+}
+
 .hero {
   background: linear-gradient(135deg, #9DBEBB, #468189);
   padding: 120px 0;
