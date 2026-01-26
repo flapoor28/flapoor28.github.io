@@ -15,6 +15,30 @@
 </head>
 <body>
 
+  <div id="login-screen" class="vh-100 d-flex align-items-center justify-content-center bg-dark text-white">
+  <div class="card p-4 shadow" style="min-width: 300px;">
+    <h4 class="mb-3 text-center">Beveiligde pagina</h4>
+
+    <input
+      type="password"
+      id="passwordInput"
+      class="form-control mb-3"
+      placeholder="Wachtwoord"
+    >
+
+    <button class="btn btn-primary w-100" onclick="checkPassword()">
+      Inloggen
+    </button>
+
+    <p id="error" class="text-danger mt-3 text-center d-none">
+      Onjuist wachtwoord
+    </p>
+  </div>
+</div>
+
+  <div id="site-content" class="d-none">
+
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
@@ -37,7 +61,7 @@
 <section class="hero text-white text-center">
   <div class="container">
     <h1 class="display-4 fw-bold" id="greeting">
-      Goedemorgen mevrouw …
+      Goedemorgen mevrouw Tielbeke
     </h1>
     <p class="lead">Gemaakt met HTML, CSS en Bootstrap</p>
     <a href="#" class="btn btn-primary btn-lg mt-3">Bekijk mijn werk</a>
@@ -83,8 +107,36 @@
   <p class="mb-0">© 2026 - Mijn Website</p>
 </footer>
 
+  </div>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  const CORRECT_PASSWORD = "flapoor1234";
+
+  function checkPassword() {
+    const input = document.getElementById("passwordInput").value;
+    const error = document.getElementById("error");
+
+    if (input === CORRECT_PASSWORD) {
+      sessionStorage.setItem("authenticated", "true");
+      document.getElementById("login-screen").classList.add("d-none");
+      document.getElementById("site-content").classList.remove("d-none");
+    } else {
+      error.classList.remove("d-none");
+    }
+  }
+
+  // Bij refresh: check of al ingelogd
+  if (sessionStorage.getItem("authenticated") === "true") {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("login-screen").classList.add("d-none");
+      document.getElementById("site-content").classList.remove("d-none");
+    });
+  }
+</script>
+
 <script>
   function getGreeting() {
     const hour = new Date().getHours();
@@ -101,6 +153,8 @@
   const greetingElement = document.getElementById("greeting");
   greetingElement.textContent = `${getGreeting()} mevrouw …`;
 </script>
+
+  
 
 </body>
 </html>
