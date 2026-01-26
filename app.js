@@ -1,4 +1,3 @@
-<script>
   const CORRECT_PASSWORD = "flapoor1234";
 
   function checkPassword() {
@@ -21,9 +20,7 @@
       document.getElementById("site-content").classList.remove("d-none");
     });
   }
-</script>
 
-<script>
   function getGreeting() {
     const hour = new Date().getHours();
 
@@ -38,9 +35,7 @@
 
   const greetingElement = document.getElementById("greeting");
   greetingElement.textContent = `${getGreeting()} mevrouw Tielbeke`;
-</script>
 
-  <script>
   // Lijst van namen
   const names = ["Rosan", "Chris", "Super Tielos", "Hoppie", "De hopmeister", "Roosje poosje"];
 
@@ -63,4 +58,3 @@
     // Modal tonen
     nameModal.show();
   });
-</script>
