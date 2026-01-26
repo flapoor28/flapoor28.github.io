@@ -2,11 +2,85 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Flapoor</title>
+  <title>Mijn Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Eigen CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Flapoor</h1>
-  <p>Dit is mijn website via GitHub Pages.</p>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">MijnSite</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Over mij</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projecten</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-white text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Welkom op mijn website</h1>
+    <p class="lead">Gemaakt met HTML, CSS en Bootstrap</p>
+    <a href="#" class="btn btn-primary btn-lg mt-3">Bekijk mijn werk</a>
+  </div>
+</section>
+
+<!-- Content -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Snel</h5>
+            <p class="card-text">Bootstrap zorgt voor een snelle en responsieve layout.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Modern</h5>
+            <p class="card-text">Strak design met goede spacing en typografie.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Responsief</h5>
+            <p class="card-text">Werkt perfect op mobiel, tablet en desktop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2026 - Mijn Website</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
