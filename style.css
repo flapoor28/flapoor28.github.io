@@ -1,3 +1,9 @@
+/* style.css */
+:root {
+  --bs-primary: #ff4d6d;
+  --bs-primary-hover: #ff1a4d;
+}
+
 .hero {
   background: linear-gradient(135deg, #031926, #468189);
   padding: 120px 0;
