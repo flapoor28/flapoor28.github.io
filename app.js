@@ -87,4 +87,32 @@ if(surpriseBtn) {
   });
 }
 
+  // RELATIESCHAP COUNTER
+function startRelationshipCounter() {
+  const timerElement = document.getElementById("relationshipTimer");
+  
+  // Begin datum: 23 juli 2023, 23:10
+  const startDate = new Date("2023-07-23T23:10:00");
+
+  function updateTimer() {
+    const now = new Date();
+    const diff = now - startDate; // verschil in milliseconden
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / (3600 * 24));
+    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    timerElement.textContent = `${days} dagen, ${hours} uur, ${minutes} min, ${seconds} sec`;
+  }
+
+  updateTimer(); // meteen updaten
+  setInterval(updateTimer, 1000); // update elke seconde
+}
+
+// Start de timer
+startRelationshipCounter();
+
+
 });
