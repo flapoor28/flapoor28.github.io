@@ -1,4 +1,7 @@
-  const CORRECT_PASSWORD = "flapoor1234";
+document.addEventListener("DOMContentLoaded", () => {
+
+
+const CORRECT_PASSWORD = "flapoor1234";
 
   function checkPassword() {
     const input = document.getElementById("passwordInput").value;
@@ -57,4 +60,5 @@
 
     // Modal tonen
     nameModal.show();
+  });
   });
