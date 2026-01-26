@@ -76,4 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Extra verrassing knop
+const surpriseBtn = document.getElementById("surpriseBtn");
+const surpriseModal = new bootstrap.Modal(document.getElementById("surpriseModal"));
+
+if(surpriseBtn) {
+  surpriseBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    surpriseModal.show();
+  });
+}
+
 });
