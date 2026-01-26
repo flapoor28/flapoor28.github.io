@@ -7,7 +7,9 @@ const names = [
   "De hopmeister",
   "Roosje poosje",
   "CHRISTOPHERRRRRR",
-  "Lekker spekkie :P"
+  "Lekker spekkie :P",
+  "Robsie kinderke",
+  "Robinho"
 ];
 
 // Correct wachtwoord
