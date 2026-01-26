@@ -37,7 +37,7 @@
   greetingElement.textContent = `${getGreeting()} mevrouw Tielbeke`;
 
   // Lijst van namen
-  const names = ["Rosan", "Chris", "Super Tielos", "Hoppie", "De hopmeister", "Roosje poosje"];
+  const names = ["Rosan", "Chris", "Super Tielos", "Hoppie", "De hopmeister", "Roosje poosje", "CHRISTOPHERRRRRR", "Lekker spekkie :P"];
 
   const button = document.getElementById("pickNameBtn");
   const modalName = document.getElementById("modalName");
