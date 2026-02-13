@@ -6,6 +6,12 @@
 
 .btn-primary {
   background-color: #031926 !important;
+  border-color: #031926 !important;
+}
+
+.btn-primary:hover {
+  background-color: #020d14 !important;
+  border-color: #020d14 !important;
 }
 
 .hero {
