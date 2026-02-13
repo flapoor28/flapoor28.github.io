@@ -12,6 +12,18 @@ const names = [
   "Robinho"
 ];
 
+const quotes = [
+  "Ik wil graag een pizza met een dikke bodium.",
+  "Ollie is mijn circuskat.",
+  "Mag ik jouw auto lenen?",
+  "Roos, bel mij even... Ollie is kwijt.",
+  "Bij ons op school hebben we lessen van verschillende niveauen",
+  "Can i get one bottle of wine please?",
+  "Nee Chris, ik hoef niet te kotsen...",
+  "Dit is niet echt een quote, maar het feit dat je zoveel knoeit met het eten mag niet onbenoemd gelaten worden.",
+  "M'n gezicht is bijna dezelfde kleur als m'n gezicht.",
+];
+
 // Correct wachtwoord
 const CORRECT_PASSWORD = "flapoor1234";
 
@@ -82,10 +94,20 @@ document.addEventListener("DOMContentLoaded", () => {
 const surpriseBtn = document.getElementById("surpriseBtn");
 const surpriseModal = new bootstrap.Modal(document.getElementById("surpriseModal"));
 
+  const quoteBtn = document.getElementById("quoteBtn");
+  const quoteModal = new bootstrap.Modal(document.getElementById("quoteModal"));
+
 if(surpriseBtn) {
   surpriseBtn.addEventListener("click", (event) => {
     event.preventDefault();
     surpriseModal.show();
+  });
+}
+
+  if(quoteBtn) {
+  quoteBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    quoteModal.show();
   });
 }
 
