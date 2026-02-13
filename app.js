@@ -35,6 +35,22 @@ function getGreeting() {
   return "Goedenavond";
 }
 
+function getQuoteOfTheDay() {
+  const startDate = new Date("2023-07-23T00:00:00"); // vaste referentiedatum
+  const today = new Date();
+
+  // Alleen datum vergelijken (tijd negeren)
+  const start = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+  const current = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+  const diffTime = current - start;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  const index = diffDays % quotes.length; // roteert door array
+  return quotes[index];
+}
+
+
 // Wacht tot DOM volledig geladen is
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -104,9 +120,21 @@ if(surpriseBtn) {
   });
 }
 
-  if(quoteBtn) {
+if (quoteBtn) {
   quoteBtn.addEventListener("click", (event) => {
     event.preventDefault();
+
+    const modalQuote = document.getElementById("modalQuote");
+    const dailyQuote = getQuoteOfTheDay();
+
+    // Optioneel: eerst leegmaken als je stacking niet wil
+    modalQuote.innerHTML = "";
+
+    // Appenden
+    const p = document.createElement("p");
+    p.textContent = dailyQuote;
+    modalQuote.appendChild(p);
+
     quoteModal.show();
   });
 }
