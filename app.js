@@ -22,6 +22,7 @@ const quotes = [
   "Nee Chris, ik hoef niet te kotsen...",
   "Dit is niet echt een quote, maar het feit dat je zoveel knoeit met het eten mag niet onbenoemd gelaten worden.",
   "M'n gezicht is bijna dezelfde kleur als m'n gezicht.",
+  "Ik denk dat JA21 qua hypotheek onze voorkeur heeft."
 ];
 
 // Correct wachtwoord
